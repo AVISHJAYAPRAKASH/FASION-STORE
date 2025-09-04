@@ -1,0 +1,65 @@
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.input,
+.select {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.radio-group label {
+  font-weight: 500;
+  color: #444;
+}
+
+.submit-btn {
+  padding: 0.7rem;
+  background-color: #0078D4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #005fa3;
+}
+
+#HP{
+  color: orange;
+}

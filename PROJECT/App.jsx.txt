@@ -1,0 +1,72 @@
+import React, { useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './REACT/Home'
+import Login from './REACT/Login'
+import SignUp from './REACT/SignUp'
+import "./App.css"
+
+import "./REACT/Color.css"
+import Men from './REACT/Men'
+import Women from './REACT/Women'
+import Kids from './REACT/Kids'
+import Web from './REACT/Web'
+import Cart from './REACT/Cart'
+
+
+
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+  let router=createBrowserRouter([
+    {
+      path:"/",
+      element:<Home></Home>,
+      children:[
+        {
+          path:"/signup",
+          element:<SignUp></SignUp>
+        },
+        {
+          path:"/login",
+          element:<Login></Login>
+        },
+        {
+          path:"/web",
+          element:<Web></Web>
+        },
+        {
+          path:"/men",
+          element:<Men addToCart={addToCart} ></Men>
+        },
+        {
+          path:"/women",
+          element:<Women addToCart={addToCart} ></Women>
+        },
+        {
+          path:"/kids",
+          element:<Kids addToCart={addToCart} ></Kids>
+        },
+         {
+          path:"/cart",
+          element:<Cart cartItems={cartItems}></Cart>
+        }
+      ]
+    }
+  ])
+
+  // console.log(DATA);
+  
+  return (
+    <div>
+      {/* <Data></Data> */}
+      <RouterProvider router={router}></RouterProvider>
+
+
+    </div>
+  )
+}
+
+export default App
